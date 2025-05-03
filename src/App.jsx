@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import TicketTiers from "./components/TicketTiers";
 import ScheduleCard from "./components/ScheduleCard";
 import About from "./components/About";
-import Venue from "./components/venue";
+import Venue from "./components/Venue";
 import Footer from "./components/Footer";
 import Particle from "./components/Particle";
 import Hero from "./components/hero";
