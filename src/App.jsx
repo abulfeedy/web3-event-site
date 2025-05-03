@@ -7,7 +7,7 @@ import About from "./components/About";
 import Venue from "./components/Venue";
 import Footer from "./components/Footer";
 import Particle from "./components/Particle";
-import Hero from "./components/hero";
+import Hero from "./components/Hero";
 import { createWeb3Modal } from "@web3modal/wagmi/react";
 import { WagmiProvider } from "wagmi";
 import { config } from "../wagmi.config";
