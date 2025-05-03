@@ -1,0 +1,88 @@
+The background image (bg.png) you uploaded has a dark, futuristic vibe, which fits perfectly for a Web3 event. Here’s a breakdown of the colors and style:
+Colors in the Image
+Primary Background: A deep navy blue (#1A2A44 or close to bg-blue-950 in Tailwind).
+
+Gradient Accents: Lighter blue shades transitioning from a medium blue (#2B4A7A or bg-blue-800) to a brighter blue (#3B82F6 or bg-blue-500).
+
+Shapes: The geometric blue ribbons have a gradient from a vibrant blue (#3B82F6 or bg-blue-500) to a darker blue (#1E3A8A or bg-blue-900).
+
+Style Notes
+The image has a sleek, techy aesthetic with angular shapes, giving it a modern, Web3/metaverse feel.
+
+The dark background with blue accents suggests a futuristic, immersive event atmosphere.
+
+Color Palette for Text and Elements
+To rhyme with the image:
+Text: Use white (text-white) for primary text, with accents in lighter blues (text-blue-300 or text-blue-400) to match the ribbons.
+
+Buttons/Accents: Use vibrant blue (bg-blue-500 or bg-blue-600) for CTAs, with hover effects in a slightly darker shade (hover:bg-blue-700).
+
+Overlay: Keep the semi-transparent black overlay (before:bg-black before:opacity-20) to ensure text readability, but we can adjust the opacity if needed.
+
+
+
+
+
+
+
+
+
+
+import React from 'react';
+import ThreeScene from "./ThreeScene";
+import Countdown from "./Countdown";
+import ConnectButton from "./ConnectButton";
+
+function Hero({ scrollToTicketTiers }) {
+  return (
+
+    <div>
+        <div className="min-h-screen bg-[url('./assets/bg.png')] bg-cover bg-center bg-no-repeat text-white relative before:absolute before:inset-0 before:bg-black before:opacity-30">
+        <header className="flex justify-between items-center p-6 relative z-20">
+          <div className="flex items-center space-x-4">
+            <h1 className="text-3xl font-extrabold tracking-tight">MetaVerse Fest 2025</h1>
+          </div>
+          <ConnectButton />
+        </header>
+
+        <section className="relative px-4 pb-10 text-center">
+          {/* 3D Scene as Background */}
+          <div className="absolute inset-0 w-full h-full">
+            <ThreeScene />
+          </div>
+          <div className="relative z-50 max-w-4xl mx-auto space-y-6 mt-28">
+            <div className=" ">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-300">
+                Step Into the Future
+              </h2>
+              <p className="mt-3 text-lg sm:text-xl text-blue-300 max-w-2xl mx-auto">
+                MetaVerse Fest 2025 is not just an event—it’s a revolution powered by the limitless possibilities of Web3.
+              </p>
+            </div>
+            {/* Second Text Block */}
+            <div className="mt-32">
+              <p className="text-lg sm:text-xl text-blue-300 max-w-2xl mx-auto">
+                Join the ultimate Web3 experience with exclusive NFT tickets to MetaVerse Fest 2025
+              </p>
+              <div className="mt-28">
+                <Countdown targetDate="2025-08-01T20:00:00" />
+              </div>
+              {/* Call-to-Action Button */}
+              <div className="mt-10">
+                <button 
+                  onClick={scrollToTicketTiers}
+                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
+                >
+                  Get Your NFT Ticket
+                  </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </div>
+  )
+}
+
+export default Hero;

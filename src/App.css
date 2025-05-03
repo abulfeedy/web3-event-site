@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+.w3m-modal {
+    font-family: inherit;
+  }
+  .w3m-modal .w3m-container {
+    background: linear-gradient(to right, #0d162b, #1e3a8a, #12284d);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+  }
+  .w3m-modal .w3m-button {
+    background-color: #1e40af;
+    color: white;
+    border-radius: 1rem;
+  }
+  .w3m-modal .w3m-button:hover {
+    background-color: #2563eb;
+  }
