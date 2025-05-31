@@ -46,6 +46,9 @@ function Footer({ scrollToTicketTiers }) {
           </button>
           <ConnectButton />
         </div>
+         <p className="text-center text-blue-200 mt-10 mb-5 text-sm sm:text-base font-medium"><span className="text-white">Disclaimer : </span>
+           Demo project — not for production use. Built by <a href="https://qubaagency.com" target="blank" 
+           className="underline italic">Quba Web3 Agency</a>.</p>
         <p className="text-xs sm:text-sm font-medium text-blue-300">
           Powered by MetaChain © 2025 — All Rights Reserved
         </p>
